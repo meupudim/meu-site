@@ -3,60 +3,102 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pudim 500g</title>
+  <title>Cardápio</title>
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background:#f6f6f6; }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 24px; }
-    .card { background:#fff; border-radius: 16px; padding: 24px; box-shadow: 0 6px 20px rgba(0,0,0,.08); }
-    h1 { margin: 0 0 8px; }
-    p { line-height: 1.5; }
-    .price { font-size: 22px; font-weight: 700; margin: 16px 0; }
-    .btn {
-      display: inline-block; padding: 14px 18px; border-radius: 12px;
-      text-decoration: none; background: #25D366; color: white; font-weight: 700;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f6f6f6;
     }
-    .btn:hover { opacity: .9; }
+
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.08);
+    }
+
     .img {
-      width: 100%; max-height: 400px; object-fit: cover; border-radius: 14px; margin: 16px 0;
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
     }
-    .muted { color:#555; font-size:14px; }
+
+    .price {
+      font-weight: bold;
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 16px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
   </style>
 </head>
 <body>
+
   <div class="wrap">
-    <div class="card">
-      <h1>Pudim 500g</h1>
+    <h1>Nosso Cardápio</h1>
 
-      <p>
-        Pudim artesanal cremoso, preparado com ingredientes selecionados e aquela calda dourada irresistível.
-        Textura macia, sabor equilibrado e o doce perfeito para fechar qualquer refeição com chave de ouro.
-      </p>
+    <div class="grid">
 
-      <img class="img" src="pudim.jpeg" alt="Pudim 500g">
+      <!-- PUDIM 500g -->
+      <div class="card">
+        <img class="img" src="pudim.jpeg" alt="Pudim 500g">
+        <h2>Pudim 500g</h2>
+        <p>Pudim artesanal cremoso com calda dourada irresistível.</p>
+        <div class="price">R$ 79,00</div>
+        <a class="btn"
+           href="https://wa.me/5547992305889?text=Olá! Quero comprar o Pudim 500g por R$79."
+           target="_blank">
+           Comprar pelo WhatsApp
+        </a>
+      </div>
 
-      <ul>
-        <li>Receita artesanal com sabor caseiro</li>
-        <li>Textura extremamente cremosa</li>
-        <li>Ideal para sobremesas e ocasiões especiais</li>
-      </ul>
+      <!-- PUDIM 1kg -->
+      <div class="card">
+        <img class="img" src="pudim.jpeg" alt="Pudim 1kg">
+        <h2>Pudim 1kg</h2>
+        <p>Versão maior do nosso pudim artesanal, perfeito para compartilhar.</p>
+        <div class="price">R$ 149,00</div>
+        <a class="btn"
+           href="https://wa.me/5547992305889?text=Olá! Quero comprar o Pudim 1kg por R$149."
+           target="_blank">
+           Comprar pelo WhatsApp
+        </a>
+      </div>
 
-      <div class="price">R$ 79,00</div>
-
-      <a class="btn" id="zap" href="#" target="_blank" rel="noopener">
-        Comprar pelo WhatsApp
-      </a>
-
-      <p class="muted" style="margin-top:16px;">
-        Clique no botão para finalizar sua compra diretamente pelo WhatsApp.
-      </p>
     </div>
   </div>
 
-  <script>
-    const phone = "5547992305889";
-    const message = "Olá! Quero comprar o Pudim 500g por R$79. Pode me informar disponibilidade e formas de pagamento?";
-    const link = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
-    document.getElementById("zap").href = link;
-  </script>
 </body>
 </html>
